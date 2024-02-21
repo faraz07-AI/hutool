@@ -30,3 +30,6 @@ jobs:
 
       - name: setting up dependencies and build
         run: mvn clean package -Dmaven.test.skip=true -B -V
+
+      - name: Generate Cobertura coverage report
+        run: mvn cobertura:cobertura -Dcobertura.report.format=html -B -V
