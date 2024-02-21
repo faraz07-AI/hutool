@@ -22,7 +22,11 @@ jobs:
             java-version: '8'
             architecture: 'x64'
             distribution: 'adopt'
+
       - name: Setting the timezone to Asia/Shanghai
         run: |
           sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
           echo "Successfully updated timezone to Asia/Shanghai timezone" | sudo tee /etc/timezone
+
+      - name: setting up dependencies and build
+        run: mvn clean package -Dmaven.test.skip=true -B -V
