@@ -1,0 +1,17 @@
+name: My custom workflow manual migration for project-2
+
+on:
+  push:
+    branches:
+      - v5-master
+  pull_request:
+    branches:
+      - v5-master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
