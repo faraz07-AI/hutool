@@ -33,3 +33,4 @@ jobs:
 
       - name: Generate Cobertura coverage report
         run: mvn cobertura:cobertura -Dcobertura.report.format=html -B -V
+
