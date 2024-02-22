@@ -35,4 +35,4 @@ jobs:
         run: mvn cobertura:cobertura -Dcobertura.report.format=html -B -V
 
       - name: uploading code coverage data to the Codecov service
-        run: bash <(curl -s https://codecov.io/bash))
+        run: bash <(curl -s https://codecov.io/bash)
