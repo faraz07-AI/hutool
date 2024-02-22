@@ -29,12 +29,10 @@ jobs:
           echo "Successfully updated timezone to Asia/Shanghai timezone" | sudo tee /etc/timezone
 
       - name: setting up dependencies and build
-        run: mvn clean package -Dmaven.test.skip=true -B -V
+        run: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
       - name: Generate Cobertura coverage report
         run: mvn cobertura:cobertura -Dcobertura.report.format=html -B -V
 
       - name: uploading code coverage data to the Codecov service
         run: bash <(curl -s https://codecov.io/bash))
-
-
