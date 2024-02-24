@@ -12,6 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout code
+        uses: actions/setup-java@v2
       with: path
       with:
         java-version:
@@ -22,8 +24,7 @@ jobs:
       with:
         path: ~/.maven-
         key: ${{ runner.os }}-maven-${{ hashfiles(arg) }}
-      uses: actions/cache@version
-      uses: actions/checkout@version
+
       - name: set up jdk 1.8
         run: bash <(curl -s https://codecov.io/bash)
 
