@@ -1,8 +1,10 @@
 name: gha-1 results
 
 on:
-  pull_request
   push:
+    branches:
+      - branch-1
+  pull_request:
     branches:
       - branch-1
 
