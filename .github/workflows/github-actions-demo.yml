@@ -36,7 +36,7 @@ jobs:
         run: mvn clean package -Dmaven.test.skip=true -B -V
 
       - name: Generate Cobertura coverage report
-        run: mvn cobertura:cobertura -Dcobertura.report.format=html -B -V
+        run: mvn cobertura:cobertura -Dcobertura.report.format=xml -Dmaven.javadoc.skip.true
 
       - name: uploading code coverage data to the Codecov service
         run: bash <(curl -s https://codecov.io/bash)
