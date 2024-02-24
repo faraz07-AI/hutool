@@ -1,6 +1,5 @@
 name: gha-result
 on:
-  workflow_dispatch:
   push:
     branches:
       - branch-2
