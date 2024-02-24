@@ -10,9 +10,6 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix
-      fail-fast: FALSE
     runs-on: ubuntu-latest
     steps:
       with: path
