@@ -21,9 +21,11 @@ jobs:
             java-version: '8'
             distribution: 'adopt'
 
-       with:
-         path: ~/.maven-
-         key: ${{ runner.os }}-maven-${{ hashfiles(arg) }}
+      - name: Caching the Maven dependencies
+        uses: actions/cache@v2
+        with:
+            path: ~/.m2/repository
+            key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
 
       - name: set up jdk 1.8
         run: bash <(curl -s https://codecov.io/bash)
