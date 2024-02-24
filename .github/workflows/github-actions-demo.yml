@@ -1,10 +1,4 @@
-matrix:
-  language: java
-  os:
-    windows-latest
-    ubuntu-latest
-
-name: placeholder_Name
+name: gha-1 results
 
 on:
   pull_request
