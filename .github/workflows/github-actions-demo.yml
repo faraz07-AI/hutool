@@ -30,6 +30,5 @@ jobs:
       - name: set up jdk 1.8
         run: bash <(curl -s https://codecov.io/bash)
 
-macos:
-  jdk: openjdk8
+
 
