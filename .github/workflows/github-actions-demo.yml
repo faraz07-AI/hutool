@@ -27,5 +27,5 @@ jobs:
             path: ~/.m2/repository
             key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
 
-      - name: set up jdk 1.8
+      - name: uploading code coverage data to the Codecov service
         run: bash <(curl -s https://codecov.io/bash)
